@@ -1,9 +1,6 @@
 # Contractor Work Hours App (An app for letting contractors log their work hours)
 
-See it live: [Contractor Work Hours App](https://dcam-staff-next-demo.vercel.app/)   
-<a href="https://www.markdownguide.org" target="_blank">Learn Markdown!</a>
-
-
+See it live: [Contractor Work Hours App](https://dcam-staff-next-demo.vercel.app/)  
 
 ###
 Login Credentials for demo:  
@@ -50,7 +47,7 @@ This was a practical app created for a music school business. The goal here was 
 Completed and actively being used by the school's teachers.
 
 ## Learning Lessons & Challenges
-### Database Submission Logic
+### Database submission logic
 The biggest challenge in this app was probably the logic for checking attendance status and redirecting the user to the correct page. This was done by making the appropriate call to the MongoDB database depending on what page the user is currently on. For example, if the user is on "/attendance/week1", a call is made to MongoDB to check the teacher's current attendance status. If the attendance for the upcoming pay period was already submitted, the teacher will be redirected to the "/attendance/completed" page. Or, if week 1 attendance was already submitted but week 2 was not, the teacher is redirected to the "/attendance/week2" page. Similar check is performed on the "/attendance/week2" and "/attendance/completed" pages.
 
 ### Attendance form row logic for calculating the running total pay
@@ -71,7 +68,7 @@ I enjoyed the challenge of figuring out the logic for the attendance form, where
 ### Calculating the final total pay from MongoDB
 The final (total) amount that teachers are owed was calculated by using what is called an "aggregation pipeline" in MongoDB. This was completely new to me as I had never performed such a complex query with MongoDB, but I enjoyed the challenge of researching and figuring it out, and it made me appreciate the power of MongoDB as a database even more. The code for this aggregation pipeline was as follows:
 
-`const result = await Student.aggregate([
+```const result = await Student.aggregate([
     {
         $match: {
             teacher: teacher,
@@ -112,7 +109,7 @@ The final (total) amount that teachers are owed was calculated by using what is 
             }
         }
     }    
-])`
+])```
 
 
 ## Summary
