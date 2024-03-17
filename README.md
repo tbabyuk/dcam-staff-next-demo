@@ -1,6 +1,9 @@
 # Contractor Work Hours App (An app for letting contractors log their work hours)
 
-See it live: [Contractor Work Hours App](https://dcam-staff-next-demo.vercel.app/)
+See it live: [Contractor Work Hours App](https://dcam-staff-next-demo.vercel.app/)   
+<a href="https://www.markdownguide.org" target="_blank">Learn Markdown!</a>
+
+
 
 ###
 Login Credentials for demo:  
@@ -41,7 +44,7 @@ This app allows teachers to log in and record their student attendance for the p
 This information is needed by the school administration to know how much pay the teachers are owed. When teachers submit their attendance, the admin is notified of this via an automatic email (using Nodemailer) and can also see it and other details of the submission in their admin app (See my other project - Office Admin App).
 
 ## Background & Motivation
-This was a practical project made for a music school business. The goal here was to get the contractors (teachers) to log their own hours instead of the admin doing it for them. This helped save a lot of time for the school admin and freed them up to focus on other matters instead.
+This was a practical app created for a music school business. The goal here was to get the contractors (teachers) to log their own hours instead of the admin doing it for them. This helped save a lot of time for the school admin and freed them up to focus on other things.
 
 ## State of Completion
 Completed and actively being used by the school's teachers.
@@ -68,8 +71,7 @@ I enjoyed the challenge of figuring out the logic for the attendance form, where
 ### Calculating the final total pay from MongoDB
 The final (total) amount that teachers are owed was calculated by using what is called an "aggregation pipeline" in MongoDB. This was completely new to me as I had never performed such a complex query with MongoDB, but I enjoyed the challenge of researching and figuring it out, and it made me appreciate the power of MongoDB as a database even more. The code for this aggregation pipeline was as follows:
 
-`
-const result = await Student.aggregate([
+`const result = await Student.aggregate([
     {
         $match: {
             teacher: teacher,
@@ -110,8 +112,8 @@ const result = await Student.aggregate([
             }
         }
     }    
-    ])
-`
+])`
+
 
 ## Summary
 Building this app taught me many new things and I am looking forward to continuing to push my boundaries even further!
