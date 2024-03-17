@@ -65,11 +65,10 @@ I enjoyed the challenge of figuring out the logic for the attendance form, where
       setTotal((prev) => prev - 0)
     }`
 
-### Calculating the final total pay from MongoDB
+### Calculating the final total pay with MongoDB
 The final (total) amount that teachers are owed was calculated by using what is called an "aggregation pipeline" in MongoDB. This was completely new to me as I had never performed such a complex query with MongoDB, but I enjoyed the challenge of researching and figuring it out, and it made me appreciate the power of MongoDB as a database even more. The code for this aggregation pipeline was as follows:
 
-```const result = await Student.aggregate([
-    {
+    `{
         $match: {
             teacher: teacher,
         }
@@ -108,8 +107,7 @@ The final (total) amount that teachers are owed was calculated by using what is 
             }
             }
         }
-    }    
-])```
+    }`
 
 
 ## Summary
